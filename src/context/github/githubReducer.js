@@ -15,15 +15,21 @@ export default (state, action) => {
         loading: false
       };
     case GET_USER:
-      return{
+      return {
         ...state,
-        user: action.paload,
+        user: action.payload,
         loading: false
-      }
+      };
     case CLEAR_USERS:
       return {
         ...state,
         users: [],
+        loading: false
+      };
+    case GET_REPOS:
+      return {
+        ...state,
+        repos: action.payload,
         loading: false
       };
     case SET_LOADING:
